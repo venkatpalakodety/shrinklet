@@ -150,6 +150,29 @@
     .policy-card a { color: var(--accent-dark); font-weight: 700; }
     .policy-card a:hover { text-decoration: underline; }
     .contact-box { margin-top: 16px; padding: 20px; border-radius: 20px; background: var(--soft); border: 1px solid var(--border); }
+    .disclaimer-box {
+      margin: 14px 0 0;
+      padding: 18px 20px;
+      border-radius: 16px;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      color: #7c2d12;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+    .disclaimer-box strong { color: #92400e; display: block; margin-bottom: 4px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .important-box {
+      margin: 14px 0 0;
+      padding: 18px 20px;
+      border-radius: 16px;
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      color: #7f1d1d;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+    .important-box strong { color: #991b1b; display: block; margin-bottom: 4px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .policy-card .caps { font-size: 13px; line-height: 1.65; color: #374151; }
 
     footer.site-footer { background:#fff; border-top:1px solid var(--line); padding:30px 0; }
     .footer-row { display:flex; align-items:center; justify-content:space-between; gap:24px; color:#6d6570; flex-wrap:wrap; }
@@ -202,7 +225,7 @@
         <div class="badge">Privacy Policy</div>
         <h1>Privacy Policy for SqueezeIt</h1>
         <p class="intro">
-          SqueezeIt is a macOS app designed to reduce the size of PDF documents and image files. Your privacy is important to us. This Privacy Policy explains how SqueezeIt handles your data.
+          SqueezeIt is a macOS app developed and distributed by Venkata Palakodety, an individual operating under the trade name <strong>Jungle Pixels</strong>. Jungle Pixels is not a registered LLC, corporation, or other legal business entity. By downloading or using SqueezeIt, you agree to the terms of this Privacy Policy and the Disclaimer of Warranties below.
         </p>
 
         <div class="meta" aria-label="Policy details">
@@ -226,96 +249,196 @@
       </header>
 
       <main>
+
         <section>
-          <h2>1. Data Collection</h2>
-          <p>SqueezeIt does not collect, store, sell, rent, or share any personal information.</p>
-          <p>The app does not require you to create an account, sign in, or provide personal details.</p>
+          <h2>1. About the Developer</h2>
+          <p>SqueezeIt is developed and published by <strong>Venkata Palakodety</strong>, an individual software developer. <strong>Jungle Pixels</strong> is a trade name and marketing website used by Venkata Palakodety. Jungle Pixels is <em>not</em> a registered company, LLC, partnership, or incorporated entity of any kind.</p>
+          <p>References to "we," "us," "our," or "Jungle Pixels" throughout this Privacy Policy refer solely to Venkata Palakodety as an individual.</p>
         </section>
 
         <section>
-          <h2>2. File Processing</h2>
-          <p>SqueezeIt processes your selected files locally on your Mac.</p>
-          <p>Files you add to SqueezeIt, including PDFs and images, are used only for the purpose of compression. Your files are not uploaded to our servers, transmitted to third parties, or stored by Jungle Pixels.</p>
+          <h2>2. Acceptance of These Terms</h2>
+          <p>By downloading, installing, or using SqueezeIt, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy in its entirety, including the Disclaimer of Warranties and Limitation of Liability set forth below. If you do not agree, do not use the app.</p>
+          <p>Continued use of SqueezeIt after any update to this Privacy Policy constitutes your acceptance of the updated terms.</p>
         </section>
 
         <section>
-          <h2>3. Supported File Types</h2>
-          <p>SqueezeIt may process files such as:</p>
+          <h2>3. Data Collection</h2>
+          <p>SqueezeIt does not collect, store, sell, rent, or share any personal information about you.</p>
+          <p>The app does not require an account, sign-in, email address, or any personal details to function.</p>
+        </section>
+
+        <section>
+          <h2>4. File Processing — All Local</h2>
+          <p>All file processing occurs entirely and exclusively on your Mac. Files you add to SqueezeIt — including PDFs and images — are never uploaded to any server, transmitted to any third party, or retained by the developer in any form.</p>
+          <p>Compressed output files are written to the location you designate on your device. The developer has no access to your files at any point before, during, or after compression.</p>
+          <div class="disclaimer-box">
+            <strong>&#9888;&#65039; File Safety — Your Responsibility</strong>
+            You are solely responsible for maintaining backups of your original files before using SqueezeIt. While SqueezeIt is designed to preserve your originals, the developer accepts no responsibility for any data loss, corruption, or unintended alteration of files resulting from use of the app.
+          </div>
+        </section>
+
+        <section>
+          <h2>5. Supported File Types</h2>
+          <p>SqueezeIt processes the following file types:</p>
           <ul>
             <li>PDF documents</li>
-            <li>JPG images</li>
+            <li>JPEG / JPG images</li>
             <li>PNG images</li>
             <li>TIFF images</li>
             <li>HEIC images</li>
             <li>GIF images</li>
             <li>WebP images</li>
           </ul>
-          <p>These files remain on your device unless you choose to share, move, or upload them using other apps or services outside of SqueezeIt.</p>
+          <p>These files remain on your device at all times. They are not uploaded, transmitted, or shared with Jungle Pixels, Venkata Palakodety, or any third party.</p>
         </section>
 
         <section>
-          <h2>4. Internet Access</h2>
-          <p>SqueezeIt does not require an internet connection to compress files.</p>
-          <p>The app does not send your documents, images, filenames, or compression results to Jungle Pixels or any external server.</p>
+          <h2>6. Internet Access</h2>
+          <p>SqueezeIt does not require an internet connection to compress files and does not initiate any network requests during normal operation.</p>
+          <p>The app does not transmit your documents, image files, filenames, file sizes, compression results, or any metadata to any external server.</p>
         </section>
 
         <section>
-          <h2>5. Analytics and Tracking</h2>
-          <p>SqueezeIt does not use third-party analytics, advertising SDKs, tracking tools, or behavioral profiling.</p>
-          <p>We do not track your usage across apps or websites.</p>
+          <h2>7. Analytics and Tracking</h2>
+          <p>SqueezeIt does not include third-party analytics SDKs, advertising networks, tracking tools, session recording, or behavioral profiling of any kind.</p>
+          <p>The developer does not track your usage, behavior, or activity within the app or across other apps or websites.</p>
         </section>
 
         <section>
-          <h2>6. Payments and App Store Data</h2>
-          <p>If you download or purchase SqueezeIt through the Mac App Store, Apple may process certain information related to your download, purchase, subscription, refund, or device according to Apple’s own privacy policies.</p>
-          <p>Jungle Pixels does not receive your full payment details, credit card information, or Apple ID password.</p>
+          <h2>8. Apple App Store and Payments</h2>
+          <p>SqueezeIt is distributed through the Apple Mac App Store. If you download, purchase, or obtain a refund for SqueezeIt, Apple Inc. processes that transaction pursuant to Apple's own Privacy Policy and Terms of Service, which are independent of and not governed by this Privacy Policy.</p>
+          <p>The developer does not receive your payment information, credit card details, Apple ID, or any other personal data handled directly by Apple.</p>
         </section>
 
         <section>
-          <h2>7. Crash Reports and Diagnostics</h2>
-          <p>Apple may provide developers with crash reports or diagnostic information if you have chosen to share analytics with app developers in your macOS settings.</p>
-          <p>These reports are provided by Apple and may help us improve app stability. They do not include the contents of your compressed files.</p>
+          <h2>9. Crash Reports and Diagnostics</h2>
+          <p>If you have enabled "Share analytics with app developers" in your macOS System Settings, Apple may provide the developer with anonymized crash reports and diagnostic information. These reports do not include the contents of your files.</p>
+          <p>You may disable this at any time in System Settings &#8594; Privacy &amp; Security &#8594; Analytics &amp; Improvements.</p>
         </section>
 
         <section>
-          <h2>8. Children’s Privacy</h2>
-          <p>SqueezeIt does not knowingly collect personal information from children.</p>
-          <p>Because the app does not collect personal information, it does not knowingly collect data from users of any age.</p>
+          <h2>10. Children's Privacy</h2>
+          <p>SqueezeIt does not collect personal information from any user, including children. Because no personal data is collected, the app does not knowingly collect data from children under the age of 13 (or the applicable age in your jurisdiction).</p>
         </section>
 
         <section>
-          <h2>9. Data Sharing</h2>
-          <p>We do not sell, trade, rent, or share user data with third parties.</p>
-          <p>Since SqueezeIt does not collect personal data, there is no personal data to share.</p>
+          <h2>11. Data Sharing</h2>
+          <p>The developer does not sell, trade, license, rent, or share personal data with any third party. Because SqueezeIt collects no personal data, there is no personal data to share.</p>
         </section>
 
         <section>
-          <h2>10. Data Retention</h2>
-          <p>SqueezeIt does not retain your personal information or uploaded files.</p>
-          <p>Compressed files are saved only where you choose to save them on your Mac.</p>
+          <h2>12. Data Retention</h2>
+          <p>SqueezeIt retains no user data of any kind. Compressed files are saved only to the location you choose on your Mac and are not accessible to the developer.</p>
         </section>
 
         <section>
-          <h2>11. Security</h2>
-          <p>Because files are processed locally on your Mac and are not uploaded to Jungle Pixels, your documents and images remain under your control.</p>
-          <p>You are responsible for managing access to your device, files, and backups.</p>
+          <h2>13. Security</h2>
+          <p>Because all processing is local and no files are transmitted over a network, the security of your files depends on the security of your own device.</p>
+          <p>You are solely responsible for securing your device, managing access to your files, and maintaining appropriate backups.</p>
         </section>
 
         <section>
-          <h2>12. Changes to This Privacy Policy</h2>
-          <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date.</p>
-          <p>Continued use of SqueezeIt after changes are posted means you accept the updated Privacy Policy.</p>
-        </section>
-
-        <section>
-          <h2>13. Contact Us</h2>
-          <p>For questions about this Privacy Policy or SqueezeIt, contact us at:</p>
-          <div class="contact-box">
-            <strong>Jungle Pixels</strong><br />
-            Email: <a href="mailto:junglepixelsbiz@gmail.com">junglepixelsbiz@gmail.com</a><br />
-            Website: <a href="https://www.junglepixels.com" target="_blank" rel="noopener noreferrer">www.junglepixels.com</a>
+          <h2>14. Disclaimer of Warranties</h2>
+          <p>SQUEEZEIT IS PROVIDED <strong>"AS IS"</strong> AND <strong>"AS AVAILABLE,"</strong> WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.</p>
+          <div class="important-box">
+            <strong>&#128683; No Warranties — Read Carefully</strong>
+            To the fullest extent permitted by applicable law, Venkata Palakodety (operating as Jungle Pixels) expressly disclaims all warranties, including but not limited to:
+            <ul style="margin-top:10px; padding-left:18px;">
+              <li>Any implied warranty of <strong>merchantability</strong> or fitness for a particular purpose;</li>
+              <li>Any warranty that SqueezeIt will meet your requirements or produce a specific result;</li>
+              <li>Any warranty that SqueezeIt will be uninterrupted, error-free, secure, or free of bugs or viruses;</li>
+              <li>Any warranty regarding the <strong>accuracy, completeness, or quality</strong> of compressed output files;</li>
+              <li>Any warranty that the app will not cause <strong>data loss, file corruption, or system damage</strong>.</li>
+            </ul>
+            You assume all risk associated with using SqueezeIt. Always maintain your own backups before processing files.
           </div>
         </section>
+
+        <section>
+          <h2>15. Limitation of Liability</h2>
+          <div class="important-box">
+            <strong>&#128203; Liability Cap — Read Carefully</strong>
+            To the fullest extent permitted by applicable law, in no event shall Venkata Palakodety, Jungle Pixels, or any associates be liable for any:
+            <ul style="margin-top:10px; padding-left:18px;">
+              <li>Loss of data, loss of files, or data corruption;</li>
+              <li>Loss of profits, revenue, or business opportunities;</li>
+              <li>Indirect, incidental, special, consequential, or punitive damages;</li>
+              <li>Damages arising from your reliance on the output of SqueezeIt;</li>
+              <li>Any damages whatsoever arising from your use of, or inability to use, SqueezeIt.</li>
+            </ul>
+          </div>
+          <p style="margin-top:14px;">In any event, the total aggregate liability of Venkata Palakodety for any claim arising out of or relating to SqueezeIt shall not exceed the amount you actually paid for the app through the Mac App Store (which may be zero for free downloads).</p>
+          <p>Some jurisdictions do not allow the exclusion of certain warranties or the limitation of liability for certain types of damages. In such jurisdictions, the above limitations apply to the fullest extent permitted by applicable law.</p>
+        </section>
+
+        <section>
+          <h2>16. Indemnification</h2>
+          <p>You agree to indemnify, defend, and hold harmless Venkata Palakodety (operating as Jungle Pixels) from and against any claims, damages, losses, liabilities, costs, and expenses (including reasonable legal fees) arising from: (a) your use of SqueezeIt; (b) your violation of this Privacy Policy; or (c) your violation of any applicable law or the rights of any third party.</p>
+        </section>
+
+        <section>
+          <h2>17. App Name and Branding</h2>
+          <p>The official name of this application as published on the Apple Mac App Store is <strong>SqueezeIt PDF Compressor</strong>. The shortened name <strong>SqueezeIt</strong> is used throughout this website and associated marketing materials solely as an informal abbreviation of that full name for readability and convenience.</p>
+          <p>References to "SqueezeIt" on this website, in this Privacy Policy, and in any promotional material refer exclusively to <em>SqueezeIt PDF Compressor</em> as listed on the Mac App Store by Venkata Palakodety.</p>
+          <p>SqueezeIt PDF Compressor&#8482;, SqueezeIt&#8482;, and Jungle Pixels&#8482; are unregistered trade names used by Venkata Palakodety. No federal trademark registration exists for any of these names as of this policy&#8217;s effective date. Any rights in these names arise solely under applicable common law through use, not registration.</p>
+          <p>The developer makes no claim that the name "SqueezeIt" or "SqueezeIt PDF Compressor" is unique, exclusive, or federally protected. If you believe these names conflict with an existing registered mark, please contact the developer at <a href="mailto:junglepixelsbiz@gmail.com">junglepixelsbiz@gmail.com</a> before taking legal action.</p>
+        </section>
+
+        <section>
+          <h2>18. Intellectual Property and AI-Assisted Development</h2>
+          <p>Portions of SqueezeIt PDF Compressor were developed with the assistance of artificial intelligence (AI) tools, including large language models. Under current guidance from the United States Copyright Office, content generated autonomously by AI without sufficient human creative control may not be eligible for copyright protection.</p>
+          <p>Accordingly, Venkata Palakodety claims copyright only in the following human-authored elements of SqueezeIt PDF Compressor:</p>
+          <ul>
+            <li>The creative direction, product concept, feature decisions, and overall design vision;</li>
+            <li>The selection, arrangement, curation, and integration of AI-generated outputs into a cohesive application;</li>
+            <li>Any source code, logic, tests, or modifications written directly by Venkata Palakodety;</li>
+            <li>The app&#8217;s user interface design, visual identity, iconography, and branding;</li>
+            <li>The overall compilation of the application as an original creative work.</li>
+          </ul>
+          <p>No copyright is claimed in purely AI-generated outputs to the extent such outputs are not protectable under applicable law. The developer does not represent that SqueezeIt PDF Compressor as a whole constitutes a fully human-authored work.</p>
+          <p>Notwithstanding the above, you may not copy, modify, distribute, reverse-engineer, sell, sublicense, or create derivative works from SqueezeIt PDF Compressor or any part of it — whether AI-generated or human-authored — without prior written permission from Venkata Palakodety, except as permitted by applicable law.</p>
+          <div class="disclaimer-box">
+            <strong>&#9888;&#65039; Third-Party AI Tools</strong>
+            The use of AI tools in the development of this app does not transfer any rights, warranties, or liabilities to the AI tool providers (such as Anthropic, OpenAI, or others). Those providers are unaffiliated with SqueezeIt PDF Compressor and bear no responsibility for the app&#8217;s functionality, accuracy, or fitness for any purpose.
+          </div>
+        </section>
+
+        <section>
+          <h2>19. Third-Party Services</h2>
+          <p>SqueezeIt does not integrate with third-party services. However, your use of the app may be subject to the terms and privacy policies of Apple Inc. (Mac App Store distribution and purchases) and your macOS operating system. The developer is not responsible for the privacy practices of Apple or any other third party.</p>
+        </section>
+
+        <section>
+          <h2>20. Governing Law and Dispute Resolution</h2>
+          <p>This Privacy Policy is governed by and construed in accordance with the laws of the United States and the state of residence of Venkata Palakodety, without regard to conflict-of-law principles.</p>
+          <p><strong>Informal resolution first.</strong> Before filing any legal claim, you agree to contact the developer at <a href="mailto:junglepixelsbiz@gmail.com">junglepixelsbiz@gmail.com</a> and allow at least 30 calendar days for a good-faith attempt at informal resolution.</p>
+          <p><strong>No class actions.</strong> All disputes must be resolved on an individual basis. You waive any right to participate in a class-action lawsuit, class-wide arbitration, or representative action against Venkata Palakodety or Jungle Pixels.</p>
+          <p>If informal resolution fails, any dispute shall be submitted to binding individual arbitration under the rules of the American Arbitration Association (AAA), conducted in English.</p>
+        </section>
+
+        <section>
+          <h2>21. Severability</h2>
+          <p>If any provision of this Privacy Policy is found to be invalid, illegal, or unenforceable under applicable law, that provision shall be modified to the minimum extent necessary to make it enforceable, and all remaining provisions shall continue in full force and effect.</p>
+        </section>
+
+        <section>
+          <h2>22. Changes to This Privacy Policy</h2>
+          <p>The developer may update this Privacy Policy from time to time. Changes will be posted on this page with an updated effective date. Where changes are material, reasonable notice will be provided via the app's App Store listing or the Jungle Pixels website.</p>
+          <p>Continued use of SqueezeIt after changes are posted constitutes your acceptance of the updated Privacy Policy.</p>
+        </section>
+
+        <section>
+          <h2>23. Contact</h2>
+          <p>For questions or concerns about this Privacy Policy, contact:</p>
+          <div class="contact-box">
+            <strong>Venkata Palakodety (trading as Jungle Pixels)</strong><br />
+            Email: <a href="mailto:junglepixelsbiz@gmail.com">junglepixelsbiz@gmail.com</a><br />
+            Website: <a href="https://www.junglepixels.com" target="_blank" rel="noopener noreferrer">www.junglepixels.com</a><br /><br />
+            <em style="font-size:13px; color:#6b7280;">Jungle Pixels is a trade name only and is not a registered legal entity. All legal responsibility rests with Venkata Palakodety as an individual.</em>
+          </div>
+        </section>
+
       </main>
 
       
