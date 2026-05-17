@@ -1,0 +1,27 @@
+/*
+  Design tokens
+  Update core brand colors, spacing, shadows, and layout widths here.
+  Page CSS files consume these variables so color/theme changes stay centralized.
+*/
+:root {
+  --coral: #ff4f66;
+  --coral-deep: #e93c64;
+  --orange: #ff5427;
+  --blue: #007aff;
+  --green: #18c64b;
+  --yellow: #ffd166;
+
+  --ink: #211f26;
+  --muted: #68626f;
+  --soft: #fff0f2;
+  --paper: #fffafb;
+  --card: rgba(255, 255, 255, .86);
+  --line: rgba(80, 45, 55, .13);
+  --border: #f0dada;
+  --accent-dark: #d94f62;
+
+  --shadow: 0 24px 80px rgba(97, 24, 46, .18);
+  --shadow-soft: 0 18px 55px rgba(95, 26, 45, .12);
+  --radius: 30px;
+  --max: 1180px;
+}

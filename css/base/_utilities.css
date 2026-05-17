@@ -1,0 +1,17 @@
+/* Reusable utility classes replacing former inline styles. */
+.footer-tagline { margin-top: 6px; }
+.note--download { margin-top: 12px; }
+.legal-list { margin-top: 10px; padding-left: 18px; }
+.legal-liability { margin-top: 14px; }
+.legal-note { font-size: 13px; color: #6b7280; }
+.hero-note { margin: 12px 4px 0; }
+.callout--support-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact-heading { color: var(--accent-dark); }
+.contact-copy { margin: 8px 0 0; font-size: 14px; }

@@ -1,488 +1,264 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — Shrinklet</title>
-  <meta name="description" content="Privacy Policy for Shrinklet" />
-  <meta name="theme-color" content="#ff4f66" />
-  <style>
-    :root {
-      --coral: #ff4f66;
-      --orange: #ff5427;
-      --ink: #211f26;
-      --muted: #68626f;
-      --line: rgba(80, 45, 55, .13);
-      --card: #ffffff;
-      --border: #f0dada;
-      --accent-dark: #d94f62;
-      --soft: #fff0f2;
-      --shadow: 0 24px 80px rgba(97, 24, 46, .18);
-      --max: 1180px;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: var(--ink);
-      background:
-        radial-gradient(circle at 12% 5%, rgba(255,255,255,.35), transparent 24rem),
-        linear-gradient(140deg, #f14874 0%, #ff4d53 46%, #ff7043 100%);
-      min-height: 100vh;
-      overflow-x: hidden;
-      line-height: 1.65;
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      background-image:
-        radial-gradient(circle at 24% 22%, rgba(255,255,255,.20), transparent 1px),
-        radial-gradient(circle at 70% 16%, rgba(255,255,255,.18), transparent 1px);
-      background-size: 42px 42px, 64px 64px;
-      mask-image: linear-gradient(to bottom, black, transparent 48%);
-      opacity: .55;
-      z-index: -1;
-    }
-
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
-    .glass {
-      background: rgba(255, 255, 255, .17);
-      border: 1px solid rgba(255, 255, 255, .22);
-      box-shadow: 0 18px 70px rgba(128, 32, 45, .18);
-      backdrop-filter: blur(18px);
-    }
-
-    .nav { position: sticky; top: 14px; z-index: 100; margin-top: 14px; }
-    .nav, .nav-inner, .nav-links a, .brand {
-      transition: background .28s ease, color .28s ease, box-shadow .28s ease, border-color .28s ease, transform .28s ease;
-    }
-    .nav-inner {
-      height: 74px;
-      border-radius: 999px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 18px 0 22px;
-      color: #fff;
-    }
-    .nav.scrolled .nav-inner,
-    .nav.privacy-nav .nav-inner {
-      color: var(--ink);
-      background: rgba(255, 255, 255, .94);
-      border-color: rgba(80, 45, 55, .12);
-      box-shadow: 0 18px 45px rgba(91, 40, 55, .14);
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 850;
-      letter-spacing: -.02em;
-      font-size: 1.2rem;
-    }
-    .nav-links { display: flex; align-items: center; gap: 6px; font-size: .95rem; font-weight: 760; }
-    .nav-links a { padding: 12px 16px; border-radius: 999px; }
-    .nav-links a:hover { background: rgba(255, 79, 102, .10); color: #f43f5e; transform: translateY(-1px); }
-    .nav-cta {
-      color: #fff;
-      background: linear-gradient(135deg, var(--coral), var(--orange));
-      box-shadow: 0 12px 24px rgba(255, 79, 102, .24);
-    }
-
-    .privacy-hero { color: #fff; padding: 72px 0 34px; text-align: center; }
-    .privacy-hero h1 {
-      margin: 0;
-      font-size: clamp(3rem, 7vw, 6rem);
-      line-height: .9;
-      letter-spacing: -.07em;
-    }
-    .privacy-hero p {
-      margin: 20px auto 0;
-      max-width: 720px;
-      color: rgba(255,255,255,.90);
-      font-size: 1.15rem;
-    }
-
-    .page { width: min(920px, calc(100% - 32px)); margin: 0 auto; padding: 24px 0 76px; }
-    .policy-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-    .policy-header {
-      padding: 48px 48px 36px;
-      background: radial-gradient(circle at top left, #ffe2e7, transparent 36%), linear-gradient(135deg, #fff 0%, #fff6f7 100%);
-      border-bottom: 1px solid var(--border);
-    }
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: var(--soft);
-      color: var(--accent-dark);
-      font-weight: 700;
-      font-size: 14px;
-      margin-bottom: 18px;
-    }
-    .policy-card h1 { margin: 0; font-size: clamp(34px, 5vw, 54px); line-height: 1.05; letter-spacing: -0.045em; }
-    .intro { margin: 20px 0 0; max-width: 720px; color: #6b7280; font-size: 18px; }
-    .meta { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 28px; }
-    .meta-item { padding: 16px 18px; border: 1px solid var(--border); border-radius: 18px; background: rgba(255, 255, 255, 0.78); }
-    .meta-label { display: block; color: #6b7280; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 3px; }
-    .meta-value { font-weight: 700; color: #1f2937; word-break: break-word; }
-    .policy-card main { padding: 42px 48px 52px; }
-    .policy-card section { padding: 26px 0; border-bottom: 1px solid #f3e3e3; }
-    .policy-card section:last-child { border-bottom: 0; padding-bottom: 0; }
-    .policy-card h2 { margin: 0 0 12px; font-size: 24px; line-height: 1.25; letter-spacing: -0.025em; }
-    .policy-card p { margin: 0 0 14px; color: #374151; }
-    .policy-card p:last-child { margin-bottom: 0; }
-    .policy-card ul { margin: 12px 0 0; padding-left: 22px; color: #374151; }
-    .policy-card li { margin: 6px 0; }
-    .policy-card a { color: var(--accent-dark); font-weight: 700; }
-    .policy-card a:hover { text-decoration: underline; }
-    .contact-box { margin-top: 16px; padding: 20px; border-radius: 20px; background: var(--soft); border: 1px solid var(--border); }
-    .disclaimer-box {
-      margin: 14px 0 0;
-      padding: 18px 20px;
-      border-radius: 16px;
-      background: #fff7ed;
-      border: 1px solid #fed7aa;
-      color: #7c2d12;
-      font-size: 14px;
-      line-height: 1.65;
-    }
-    .disclaimer-box strong { color: #92400e; display: block; margin-bottom: 4px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; }
-    .important-box {
-      margin: 14px 0 0;
-      padding: 18px 20px;
-      border-radius: 16px;
-      background: #fef2f2;
-      border: 1px solid #fecaca;
-      color: #7f1d1d;
-      font-size: 14px;
-      line-height: 1.65;
-    }
-    .important-box strong { color: #991b1b; display: block; margin-bottom: 4px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; }
-    .policy-card .caps { font-size: 13px; line-height: 1.65; color: #374151; }
-
-    footer.site-footer { background:#fff; border-top:1px solid var(--line); padding:30px 0; }
-    .footer-row { display:flex; align-items:center; justify-content:space-between; gap:24px; color:#6d6570; flex-wrap:wrap; }
-    .footer-brand { display:flex; align-items:center; gap:12px; color:var(--ink); font-weight:900; }
-    .footer-links { display:flex; gap:24px; font-size:.93rem; flex-wrap:wrap; }
-    .footer-links a:hover { color:#f43f5e; }
-
-    @media (max-width: 720px) {
-      .container { width: min(100% - 28px, var(--max)); }
-      .nav { top: 8px; margin-top: 8px; }
-      .nav-inner { height: auto; border-radius: 26px; padding: 12px; align-items: flex-start; gap: 10px; flex-direction: column; }
-      .nav-links { width: 100%; flex-wrap: wrap; gap: 6px; font-size: 0.88rem; }
-      .nav-links a { padding: 10px 12px; }
-      .privacy-hero { padding: 50px 0 24px; text-align: left; }
-      .page { width: min(100% - 20px, 920px); padding: 20px 0 58px; }
-      .policy-header, .policy-card main { padding-left: 24px; padding-right: 24px; }
-      .policy-header { padding-top: 34px; }
-      .meta { grid-template-columns: 1fr; }
-      .policy-card main { padding-top: 24px; }
-      .footer-row { align-items:flex-start; flex-direction:column; }
-    }
-    .mark{
-      width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--coral),var(--orange));
-      display:grid;place-items:center;color:#fff;font-weight:950;box-shadow:0 12px 24px rgba(255,79,102,.24);
-    }
-  </style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Privacy Policy — Shrinklet</title>
+<meta content="Privacy Policy for Shrinklet" name="description"/>
+<meta content="#ff4f66" name="theme-color"/>
+<link href="css/pages/legal.css" rel="stylesheet"/>
 </head>
 <body>
-  <header class="nav privacy-nav container">
-    <div class="nav-inner glass">
-      <a class="brand" href="/index.html" aria-label="Jungle Pixels home">
-        <span class="mark">JP</span><span>Jungle Pixels</span>
-      </a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="/index.html#features">Features</a>
-        <a href="/index.html#workflow">Workflow</a>
-        <a href="/index.html#screenshots">Screenshots</a>
-        <a href="/index.html#faq">FAQ</a>
-        <a href="/support.html">Support</a>
-        <a href="/about.html">About</a>
-        <a href="/privacy.html">Privacy</a>
-        <a href="/terms-of-use.html">Terms</a>
-        <a class="nav-cta" href="/index.html#download">Download</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="privacy-hero">
-    <div class="container">
-      <h1>Privacy Policy</h1>
-      <p>Shrinklet keeps compression simple and private by processing PDFs and images locally on your Mac.</p>
-    </div>
-  </section>
-
-  <div class="page">
-    <article class="policy-card">
-
-      <header class="policy-header">
-        <div class="badge">Privacy Policy</div>
-        <h1>Privacy Policy for Shrinklet</h1>
-        <p class="intro">
+<header class="nav container" id="siteNav">
+<div class="nav-inner">
+<a aria-label="Jungle Pixels home" class="brand" href="/index.html">
+<span class="mark">JP</span><span>Jungle Pixels</span>
+</a>
+<nav aria-label="Primary navigation" class="nav-links">
+<a href="/index.html#features">Features</a>
+<a href="/index.html#workflow">Workflow</a>
+<a href="/index.html#screenshots">Screenshots</a>
+<a href="/index.html#faq">FAQ</a>
+<a href="/support.html">Support</a>
+<a href="/about.html">About</a>
+<a href="/privacy.html">Privacy</a>
+<a href="/terms-of-use.html">Terms</a>
+<a class="nav-cta" href="/index.html#download">Download</a>
+</nav>
+</div>
+</header>
+<section class="privacy-hero">
+<div class="container">
+<h1>Privacy Policy</h1>
+<p>Shrinklet keeps compression simple and private by processing PDFs and images locally on your Mac.</p>
+</div>
+</section>
+<div class="page">
+<article class="policy-card">
+<header class="policy-header">
+<div class="badge">Privacy Policy</div>
+<h1>Privacy Policy for Shrinklet</h1>
+<p class="intro">
           Shrinklet is a macOS app developed and distributed by Venkata Palakodety, an individual operating under the trade name <strong>Jungle Pixels</strong>. Jungle Pixels is not a registered LLC, corporation, or other legal business entity. By downloading or using Shrinklet, you agree to the terms of this Privacy Policy and the Disclaimer of Warranties below.
         </p>
-
-        <div class="meta" aria-label="Policy details">
-          <div class="meta-item">
-            <span class="meta-label">Effective Date</span>
-            <span class="meta-value">May 15th, 2026</span>
-          </div>
-          <div class="meta-item">
-            <span class="meta-label">Developer</span>
-            <span class="meta-value">Venkata Palakodety / Jungle Pixels</span>
-          </div>
-          <div class="meta-item">
-            <span class="meta-label">App Name</span>
-            <span class="meta-value">Shrinklet</span>
-          </div>
-          <div class="meta-item">
-            <span class="meta-label">Contact</span>
-            <span class="meta-value"><a href="mailto:junglepixelsbiz@gmail.com">junglepixelsbiz@gmail.com</a></span>
-          </div>
-        </div>
-      </header>
-
-      <main>
-
-        <section>
-          <h2>1. About the Developer</h2>
-          <p>Shrinklet is developed and published by <strong>Venkata Palakodety</strong>, an individual software developer. <strong>Jungle Pixels</strong> is a trade name and marketing website used by Venkata Palakodety. Jungle Pixels is <em>not</em> a registered company, LLC, partnership, or incorporated entity of any kind.</p>
-          <p>References to "we," "us," "our," or "Jungle Pixels" throughout this Privacy Policy refer solely to Venkata Palakodety as an individual.</p>
-        </section>
-
-        <section>
-          <h2>2. Acceptance of These Terms</h2>
-          <p>By downloading, installing, or using Shrinklet, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy in its entirety, including the Disclaimer of Warranties and Limitation of Liability set forth below. If you do not agree, do not use the app.</p>
-          <p>Continued use of Shrinklet after any update to this Privacy Policy constitutes your acceptance of the updated terms.</p>
-        </section>
-
-        <section>
-          <h2>3. Data Collection</h2>
-          <p>Shrinklet does not collect, store, sell, rent, or share any personal information about you.</p>
-          <p>The app does not require an account, sign-in, email address, or any personal details to function.</p>
-        </section>
-
-        <section>
-          <h2>4. File Processing — All Local</h2>
-          <p>All file processing occurs entirely and exclusively on your Mac. Files you add to Shrinklet — including PDFs and images — are never uploaded to any server, transmitted to any third party, or retained by the developer in any form.</p>
-          <p>Compressed output files are written to the location you designate on your device. The developer has no access to your files at any point before, during, or after compression.</p>
-          <div class="disclaimer-box">
-            <strong>&#9888;&#65039; File Safety — Your Responsibility</strong>
+<div aria-label="Policy details" class="meta">
+<div class="meta-item">
+<span class="meta-label">Effective Date</span>
+<span class="meta-value">May 15th, 2026</span>
+</div>
+<div class="meta-item">
+<span class="meta-label">Developer</span>
+<span class="meta-value">Venkata Palakodety / Jungle Pixels</span>
+</div>
+<div class="meta-item">
+<span class="meta-label">App Name</span>
+<span class="meta-value">Shrinklet</span>
+</div>
+<div class="meta-item">
+<span class="meta-label">Contact</span>
+<span class="meta-value"><a href="mailto:junglepixelsbiz@gmail.com">junglepixelsbiz@gmail.com</a></span>
+</div>
+</div>
+</header>
+<main>
+<section>
+<h2>1. About the Developer</h2>
+<p>Shrinklet is developed and published by <strong>Venkata Palakodety</strong>, an individual software developer. <strong>Jungle Pixels</strong> is a trade name and marketing website used by Venkata Palakodety. Jungle Pixels is <em>not</em> a registered company, LLC, partnership, or incorporated entity of any kind.</p>
+<p>References to "we," "us," "our," or "Jungle Pixels" throughout this Privacy Policy refer solely to Venkata Palakodety as an individual.</p>
+</section>
+<section>
+<h2>2. Acceptance of These Terms</h2>
+<p>By downloading, installing, or using Shrinklet, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy in its entirety, including the Disclaimer of Warranties and Limitation of Liability set forth below. If you do not agree, do not use the app.</p>
+<p>Continued use of Shrinklet after any update to this Privacy Policy constitutes your acceptance of the updated terms.</p>
+</section>
+<section>
+<h2>3. Data Collection</h2>
+<p>Shrinklet does not collect, store, sell, rent, or share any personal information about you.</p>
+<p>The app does not require an account, sign-in, email address, or any personal details to function.</p>
+</section>
+<section>
+<h2>4. File Processing — All Local</h2>
+<p>All file processing occurs entirely and exclusively on your Mac. Files you add to Shrinklet — including PDFs and images — are never uploaded to any server, transmitted to any third party, or retained by the developer in any form.</p>
+<p>Compressed output files are written to the location you designate on your device. The developer has no access to your files at any point before, during, or after compression.</p>
+<div class="disclaimer-box">
+<strong>⚠️ File Safety — Your Responsibility</strong>
             You are solely responsible for maintaining backups of your original files before using Shrinklet. While Shrinklet is designed to preserve your originals, the developer accepts no responsibility for any data loss, corruption, or unintended alteration of files resulting from use of the app.
           </div>
-        </section>
-
-        <section>
-          <h2>5. Supported File Types</h2>
-          <p>Shrinklet processes the following file types:</p>
-          <ul>
-            <li>PDF documents</li>
-            <li>JPEG / JPG images</li>
-            <li>PNG images</li>
-            <li>TIFF images</li>
-            <li>HEIC images</li>
-            <li>GIF images</li>
-            <li>WebP images</li>
-          </ul>
-          <p>These files remain on your device at all times. They are not uploaded, transmitted, or shared with Jungle Pixels, Venkata Palakodety, or any third party.</p>
-        </section>
-
-        <section>
-          <h2>6. Internet Access</h2>
-          <p>Shrinklet does not require an internet connection to compress files and does not initiate any network requests during normal operation.</p>
-          <p>The app does not transmit your documents, image files, filenames, file sizes, compression results, or any metadata to any external server.</p>
-        </section>
-
-        <section>
-          <h2>7. Analytics and Tracking</h2>
-          <p>Shrinklet does not include third-party analytics SDKs, advertising networks, tracking tools, session recording, or behavioral profiling of any kind.</p>
-          <p>The developer does not track your usage, behavior, or activity within the app or across other apps or websites.</p>
-        </section>
-
-        <section>
-          <h2>8. Apple App Store and Payments</h2>
-          <p>Shrinklet is distributed through the Apple Mac App Store. If you download, purchase, or obtain a refund for Shrinklet, Apple Inc. processes that transaction pursuant to Apple's own Privacy Policy and Terms of Service, which are independent of and not governed by this Privacy Policy.</p>
-          <p>The developer does not receive your payment information, credit card details, Apple ID, or any other personal data handled directly by Apple.</p>
-        </section>
-
-        <section>
-          <h2>9. Crash Reports and Diagnostics</h2>
-          <p>If you have enabled "Share analytics with app developers" in your macOS System Settings, Apple may provide the developer with anonymized crash reports and diagnostic information. These reports do not include the contents of your files.</p>
-          <p>You may disable this at any time in System Settings &#8594; Privacy &amp; Security &#8594; Analytics &amp; Improvements.</p>
-        </section>
-
-        <section>
-          <h2>10. Children's Privacy</h2>
-          <p>Shrinklet does not collect personal information from any user, including children. Because no personal data is collected, the app does not knowingly collect data from children under the age of 13 (or the applicable age in your jurisdiction).</p>
-        </section>
-
-        <section>
-          <h2>11. Data Sharing</h2>
-          <p>The developer does not sell, trade, license, rent, or share personal data with any third party. Because Shrinklet collects no personal data, there is no personal data to share.</p>
-        </section>
-
-        <section>
-          <h2>12. Data Retention</h2>
-          <p>Shrinklet retains no user data of any kind. Compressed files are saved only to the location you choose on your Mac and are not accessible to the developer.</p>
-        </section>
-
-        <section>
-          <h2>13. Security</h2>
-          <p>Because all processing is local and no files are transmitted over a network, the security of your files depends on the security of your own device.</p>
-          <p>You are solely responsible for securing your device, managing access to your files, and maintaining appropriate backups.</p>
-        </section>
-
-        <section>
-          <h2>14. Disclaimer of Warranties</h2>
-          <p>Shrinklet IS PROVIDED <strong>"AS IS"</strong> AND <strong>"AS AVAILABLE,"</strong> WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.</p>
-          <div class="important-box">
-            <strong>&#128683; No Warranties — Read Carefully</strong>
+</section>
+<section>
+<h2>5. Supported File Types</h2>
+<p>Shrinklet processes the following file types:</p>
+<ul>
+<li>PDF documents</li>
+<li>JPEG / JPG images</li>
+<li>PNG images</li>
+<li>TIFF images</li>
+<li>HEIC images</li>
+<li>GIF images</li>
+<li>WebP images</li>
+</ul>
+<p>These files remain on your device at all times. They are not uploaded, transmitted, or shared with Jungle Pixels, Venkata Palakodety, or any third party.</p>
+</section>
+<section>
+<h2>6. Internet Access</h2>
+<p>Shrinklet does not require an internet connection to compress files and does not initiate any network requests during normal operation.</p>
+<p>The app does not transmit your documents, image files, filenames, file sizes, compression results, or any metadata to any external server.</p>
+</section>
+<section>
+<h2>7. Analytics and Tracking</h2>
+<p>Shrinklet does not include third-party analytics SDKs, advertising networks, tracking tools, session recording, or behavioral profiling of any kind.</p>
+<p>The developer does not track your usage, behavior, or activity within the app or across other apps or websites.</p>
+</section>
+<section>
+<h2>8. Apple App Store and Payments</h2>
+<p>Shrinklet is distributed through the Apple Mac App Store. If you download, purchase, or obtain a refund for Shrinklet, Apple Inc. processes that transaction pursuant to Apple's own Privacy Policy and Terms of Service, which are independent of and not governed by this Privacy Policy.</p>
+<p>The developer does not receive your payment information, credit card details, Apple ID, or any other personal data handled directly by Apple.</p>
+</section>
+<section>
+<h2>9. Crash Reports and Diagnostics</h2>
+<p>If you have enabled "Share analytics with app developers" in your macOS System Settings, Apple may provide the developer with anonymized crash reports and diagnostic information. These reports do not include the contents of your files.</p>
+<p>You may disable this at any time in System Settings → Privacy &amp; Security → Analytics &amp; Improvements.</p>
+</section>
+<section>
+<h2>10. Children's Privacy</h2>
+<p>Shrinklet does not collect personal information from any user, including children. Because no personal data is collected, the app does not knowingly collect data from children under the age of 13 (or the applicable age in your jurisdiction).</p>
+</section>
+<section>
+<h2>11. Data Sharing</h2>
+<p>The developer does not sell, trade, license, rent, or share personal data with any third party. Because Shrinklet collects no personal data, there is no personal data to share.</p>
+</section>
+<section>
+<h2>12. Data Retention</h2>
+<p>Shrinklet retains no user data of any kind. Compressed files are saved only to the location you choose on your Mac and are not accessible to the developer.</p>
+</section>
+<section>
+<h2>13. Security</h2>
+<p>Because all processing is local and no files are transmitted over a network, the security of your files depends on the security of your own device.</p>
+<p>You are solely responsible for securing your device, managing access to your files, and maintaining appropriate backups.</p>
+</section>
+<section>
+<h2>14. Disclaimer of Warranties</h2>
+<p>Shrinklet IS PROVIDED <strong>"AS IS"</strong> AND <strong>"AS AVAILABLE,"</strong> WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.</p>
+<div class="important-box">
+<strong>🚫 No Warranties — Read Carefully</strong>
             To the fullest extent permitted by applicable law, Venkata Palakodety (operating as Jungle Pixels) expressly disclaims all warranties, including but not limited to:
-            <ul style="margin-top:10px; padding-left:18px;">
-              <li>Any implied warranty of <strong>merchantability</strong> or fitness for a particular purpose;</li>
-              <li>Any warranty that Shrinklet will meet your requirements or produce a specific result;</li>
-              <li>Any warranty that Shrinklet will be uninterrupted, error-free, secure, or free of bugs or viruses;</li>
-              <li>Any warranty regarding the <strong>accuracy, completeness, or quality</strong> of compressed output files;</li>
-              <li>Any warranty that the app will not cause <strong>data loss, file corruption, or system damage</strong>.</li>
-            </ul>
+            <ul class="legal-list">
+<li>Any implied warranty of <strong>merchantability</strong> or fitness for a particular purpose;</li>
+<li>Any warranty that Shrinklet will meet your requirements or produce a specific result;</li>
+<li>Any warranty that Shrinklet will be uninterrupted, error-free, secure, or free of bugs or viruses;</li>
+<li>Any warranty regarding the <strong>accuracy, completeness, or quality</strong> of compressed output files;</li>
+<li>Any warranty that the app will not cause <strong>data loss, file corruption, or system damage</strong>.</li>
+</ul>
             You assume all risk associated with using Shrinklet. Always maintain your own backups before processing files.
           </div>
-        </section>
-
-        <section>
-          <h2>15. Limitation of Liability</h2>
-          <div class="important-box">
-            <strong>&#128203; Liability Cap — Read Carefully</strong>
+</section>
+<section>
+<h2>15. Limitation of Liability</h2>
+<div class="important-box">
+<strong>📋 Liability Cap — Read Carefully</strong>
             To the fullest extent permitted by applicable law, in no event shall Venkata Palakodety, Jungle Pixels, or any associates be liable for any:
-            <ul style="margin-top:10px; padding-left:18px;">
-              <li>Loss of data, loss of files, or data corruption;</li>
-              <li>Loss of profits, revenue, or business opportunities;</li>
-              <li>Indirect, incidental, special, consequential, or punitive damages;</li>
-              <li>Damages arising from your reliance on the output of Shrinklet;</li>
-              <li>Any damages whatsoever arising from your use of, or inability to use, Shrinklet.</li>
-            </ul>
+            <ul class="legal-list">
+<li>Loss of data, loss of files, or data corruption;</li>
+<li>Loss of profits, revenue, or business opportunities;</li>
+<li>Indirect, incidental, special, consequential, or punitive damages;</li>
+<li>Damages arising from your reliance on the output of Shrinklet;</li>
+<li>Any damages whatsoever arising from your use of, or inability to use, Shrinklet.</li>
+</ul>
+</div>
+<p class="legal-liability">In any event, the total aggregate liability of Venkata Palakodety for any claim arising out of or relating to Shrinklet shall not exceed the amount you actually paid for the app through the Mac App Store (which may be zero for free downloads).</p>
+<p>Some jurisdictions do not allow the exclusion of certain warranties or the limitation of liability for certain types of damages. In such jurisdictions, the above limitations apply to the fullest extent permitted by applicable law.</p>
+</section>
+<section>
+<h2>16. Indemnification</h2>
+<p>You agree to indemnify, defend, and hold harmless Venkata Palakodety (operating as Jungle Pixels) from and against any claims, damages, losses, liabilities, costs, and expenses (including reasonable legal fees) arising from: (a) your use of Shrinklet; (b) your violation of this Privacy Policy; or (c) your violation of any applicable law or the rights of any third party.</p>
+</section>
+<section>
+<h2>17. App Name and Branding</h2>
+<p>The official name of this application as published on the Apple Mac App Store is <strong>Shrinklet</strong>. The shortened name <strong>Shrinklet</strong> is used throughout this website and associated marketing materials solely as an informal abbreviation of that full name for readability and convenience.</p>
+<p>References to "Shrinklet" on this website, in this Privacy Policy, and in any promotional material refer exclusively to <em>Shrinklet</em> as listed on the Mac App Store by Venkata Palakodety.</p>
+<p>Shrinklet™, Shrinklet™, and Jungle Pixels™ are unregistered trade names used by Venkata Palakodety. No federal trademark registration exists for any of these names as of this policy’s effective date. Any rights in these names arise solely under applicable common law through use, not registration.</p>
+<p>The developer makes no claim that the name "Shrinklet" or "Shrinklet" is unique, exclusive, or federally protected. If you believe these names conflict with an existing registered mark, please contact the developer at <a href="mailto:junglepixelsbiz@gmail.com">junglepixelsbiz@gmail.com</a> before taking legal action.</p>
+</section>
+<section>
+<h2>18. Intellectual Property and AI-Assisted Development</h2>
+<p>Portions of Shrinklet were developed with the assistance of artificial intelligence (AI) tools, including large language models. Under current guidance from the United States Copyright Office, content generated autonomously by AI without sufficient human creative control may not be eligible for copyright protection.</p>
+<p>Accordingly, Venkata Palakodety claims copyright only in the following human-authored elements of Shrinklet:</p>
+<ul>
+<li>The creative direction, product concept, feature decisions, and overall design vision;</li>
+<li>The selection, arrangement, curation, and integration of AI-generated outputs into a cohesive application;</li>
+<li>Any source code, logic, tests, or modifications written directly by Venkata Palakodety;</li>
+<li>The app’s user interface design, visual identity, iconography, and branding;</li>
+<li>The overall compilation of the application as an original creative work.</li>
+</ul>
+<p>No copyright is claimed in purely AI-generated outputs to the extent such outputs are not protectable under applicable law. The developer does not represent that Shrinklet as a whole constitutes a fully human-authored work.</p>
+<p>Notwithstanding the above, you may not copy, modify, distribute, reverse-engineer, sell, sublicense, or create derivative works from Shrinklet or any part of it — whether AI-generated or human-authored — without prior written permission from Venkata Palakodety, except as permitted by applicable law.</p>
+<div class="disclaimer-box">
+<strong>⚠️ Third-Party AI Tools</strong>
+            The use of AI tools in the development of this app does not transfer any rights, warranties, or liabilities to the AI tool providers (such as Anthropic, OpenAI, or others). Those providers are unaffiliated with Shrinklet and bear no responsibility for the app’s functionality, accuracy, or fitness for any purpose.
           </div>
-          <p style="margin-top:14px;">In any event, the total aggregate liability of Venkata Palakodety for any claim arising out of or relating to Shrinklet shall not exceed the amount you actually paid for the app through the Mac App Store (which may be zero for free downloads).</p>
-          <p>Some jurisdictions do not allow the exclusion of certain warranties or the limitation of liability for certain types of damages. In such jurisdictions, the above limitations apply to the fullest extent permitted by applicable law.</p>
-        </section>
+</section>
+<section>
+<h2>19. Third-Party Services</h2>
+<p>Shrinklet does not integrate with third-party services. However, your use of the app may be subject to the terms and privacy policies of Apple Inc. (Mac App Store distribution and purchases) and your macOS operating system. The developer is not responsible for the privacy practices of Apple or any other third party.</p>
+</section>
+<section>
+<h2>20. Governing Law and Dispute Resolution</h2>
+<p>This Privacy Policy is governed by and construed in accordance with the laws of the United States and the state of residence of Venkata Palakodety, without regard to conflict-of-law principles.</p>
+<p><strong>Informal resolution first.</strong> Before filing any legal claim, you agree to contact the developer at <a href="mailto:junglepixelsbiz@gmail.com">junglepixelsbiz@gmail.com</a> and allow at least 30 calendar days for a good-faith attempt at informal resolution.</p>
+<p><strong>No class actions.</strong> All disputes must be resolved on an individual basis. You waive any right to participate in a class-action lawsuit, class-wide arbitration, or representative action against Venkata Palakodety or Jungle Pixels.</p>
+<p>If informal resolution fails, any dispute shall be submitted to binding individual arbitration under the rules of the American Arbitration Association (AAA), conducted in English.</p>
+</section>
+<section>
+<h2>21. Severability</h2>
+<p>If any provision of this Privacy Policy is found to be invalid, illegal, or unenforceable under applicable law, that provision shall be modified to the minimum extent necessary to make it enforceable, and all remaining provisions shall continue in full force and effect.</p>
+</section>
+<section>
+<h2>22. Changes to This Privacy Policy</h2>
+<p>The developer may update this Privacy Policy from time to time. Changes will be posted on this page with an updated effective date. Where changes are material, reasonable notice will be provided via the app's App Store listing or the Jungle Pixels website.</p>
+<p>Continued use of Shrinklet after changes are posted constitutes your acceptance of the updated Privacy Policy.</p>
+</section>
+<section>
+<h2>23. Contact</h2>
+<p>For questions or concerns about this Privacy Policy, contact:</p>
+<div class="contact-box">
+<strong>Venkata Palakodety (trading as Jungle Pixels)</strong><br/>
+            Email: <a href="mailto:junglepixelsbiz@gmail.com">junglepixelsbiz@gmail.com</a><br/>
+            Website: <a href="https://www.junglepixels.com" rel="noopener noreferrer" target="_blank">www.junglepixels.com</a><br/><br/>
+<em class="legal-note">Jungle Pixels is a trade name only and is not a registered legal entity. All legal responsibility rests with Venkata Palakodety as an individual.</em>
+</div>
+</section>
+</main>
+</article>
+</div>
+<footer class="site-footer">
+<div class="container footer-row">
+<div>
+<div class="footer-brand"><span>Jungle Pixels</span></div>
+<div class="footer-tagline">Crafting delightful Mac apps.</div>
+</div>
+<nav aria-label="Footer navigation" class="footer-links">
+<a href="/index.html#features">Features</a>
+<a href="/index.html#screenshots">Screenshots</a>
+<a href="/index.html#faq">FAQ</a>
 
-        <section>
-          <h2>16. Indemnification</h2>
-          <p>You agree to indemnify, defend, and hold harmless Venkata Palakodety (operating as Jungle Pixels) from and against any claims, damages, losses, liabilities, costs, and expenses (including reasonable legal fees) arising from: (a) your use of Shrinklet; (b) your violation of this Privacy Policy; or (c) your violation of any applicable law or the rights of any third party.</p>
-        </section>
-
-        <section>
-          <h2>17. App Name and Branding</h2>
-          <p>The official name of this application as published on the Apple Mac App Store is <strong>Shrinklet</strong>. The shortened name <strong>Shrinklet</strong> is used throughout this website and associated marketing materials solely as an informal abbreviation of that full name for readability and convenience.</p>
-          <p>References to "Shrinklet" on this website, in this Privacy Policy, and in any promotional material refer exclusively to <em>Shrinklet</em> as listed on the Mac App Store by Venkata Palakodety.</p>
-          <p>Shrinklet&#8482;, Shrinklet&#8482;, and Jungle Pixels&#8482; are unregistered trade names used by Venkata Palakodety. No federal trademark registration exists for any of these names as of this policy&#8217;s effective date. Any rights in these names arise solely under applicable common law through use, not registration.</p>
-          <p>The developer makes no claim that the name "Shrinklet" or "Shrinklet" is unique, exclusive, or federally protected. If you believe these names conflict with an existing registered mark, please contact the developer at <a href="mailto:junglepixelsbiz@gmail.com">junglepixelsbiz@gmail.com</a> before taking legal action.</p>
-        </section>
-
-        <section>
-          <h2>18. Intellectual Property and AI-Assisted Development</h2>
-          <p>Portions of Shrinklet were developed with the assistance of artificial intelligence (AI) tools, including large language models. Under current guidance from the United States Copyright Office, content generated autonomously by AI without sufficient human creative control may not be eligible for copyright protection.</p>
-          <p>Accordingly, Venkata Palakodety claims copyright only in the following human-authored elements of Shrinklet:</p>
-          <ul>
-            <li>The creative direction, product concept, feature decisions, and overall design vision;</li>
-            <li>The selection, arrangement, curation, and integration of AI-generated outputs into a cohesive application;</li>
-            <li>Any source code, logic, tests, or modifications written directly by Venkata Palakodety;</li>
-            <li>The app&#8217;s user interface design, visual identity, iconography, and branding;</li>
-            <li>The overall compilation of the application as an original creative work.</li>
-          </ul>
-          <p>No copyright is claimed in purely AI-generated outputs to the extent such outputs are not protectable under applicable law. The developer does not represent that Shrinklet as a whole constitutes a fully human-authored work.</p>
-          <p>Notwithstanding the above, you may not copy, modify, distribute, reverse-engineer, sell, sublicense, or create derivative works from Shrinklet or any part of it — whether AI-generated or human-authored — without prior written permission from Venkata Palakodety, except as permitted by applicable law.</p>
-          <div class="disclaimer-box">
-            <strong>&#9888;&#65039; Third-Party AI Tools</strong>
-            The use of AI tools in the development of this app does not transfer any rights, warranties, or liabilities to the AI tool providers (such as Anthropic, OpenAI, or others). Those providers are unaffiliated with Shrinklet and bear no responsibility for the app&#8217;s functionality, accuracy, or fitness for any purpose.
-          </div>
-        </section>
-
-        <section>
-          <h2>19. Third-Party Services</h2>
-          <p>Shrinklet does not integrate with third-party services. However, your use of the app may be subject to the terms and privacy policies of Apple Inc. (Mac App Store distribution and purchases) and your macOS operating system. The developer is not responsible for the privacy practices of Apple or any other third party.</p>
-        </section>
-
-        <section>
-          <h2>20. Governing Law and Dispute Resolution</h2>
-          <p>This Privacy Policy is governed by and construed in accordance with the laws of the United States and the state of residence of Venkata Palakodety, without regard to conflict-of-law principles.</p>
-          <p><strong>Informal resolution first.</strong> Before filing any legal claim, you agree to contact the developer at <a href="mailto:junglepixelsbiz@gmail.com">junglepixelsbiz@gmail.com</a> and allow at least 30 calendar days for a good-faith attempt at informal resolution.</p>
-          <p><strong>No class actions.</strong> All disputes must be resolved on an individual basis. You waive any right to participate in a class-action lawsuit, class-wide arbitration, or representative action against Venkata Palakodety or Jungle Pixels.</p>
-          <p>If informal resolution fails, any dispute shall be submitted to binding individual arbitration under the rules of the American Arbitration Association (AAA), conducted in English.</p>
-        </section>
-
-        <section>
-          <h2>21. Severability</h2>
-          <p>If any provision of this Privacy Policy is found to be invalid, illegal, or unenforceable under applicable law, that provision shall be modified to the minimum extent necessary to make it enforceable, and all remaining provisions shall continue in full force and effect.</p>
-        </section>
-
-        <section>
-          <h2>22. Changes to This Privacy Policy</h2>
-          <p>The developer may update this Privacy Policy from time to time. Changes will be posted on this page with an updated effective date. Where changes are material, reasonable notice will be provided via the app's App Store listing or the Jungle Pixels website.</p>
-          <p>Continued use of Shrinklet after changes are posted constitutes your acceptance of the updated Privacy Policy.</p>
-        </section>
-
-        <section>
-          <h2>23. Contact</h2>
-          <p>For questions or concerns about this Privacy Policy, contact:</p>
-          <div class="contact-box">
-            <strong>Venkata Palakodety (trading as Jungle Pixels)</strong><br />
-            Email: <a href="mailto:junglepixelsbiz@gmail.com">junglepixelsbiz@gmail.com</a><br />
-            Website: <a href="https://www.junglepixels.com" target="_blank" rel="noopener noreferrer">www.junglepixels.com</a><br /><br />
-            <em style="font-size:13px; color:#6b7280;">Jungle Pixels is a trade name only and is not a registered legal entity. All legal responsibility rests with Venkata Palakodety as an individual.</em>
-          </div>
-        </section>
-
-      </main>
-
-      
+<a href="/support.html">Support</a><a href="/about.html">About</a>
     
-    </article>
-  </div>
-
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <div>
-        <div class="footer-brand"><span>Jungle Pixels</span></div>
-        <div style="margin-top:6px">Crafting delightful Mac apps.</div>
-      </div>
-      <nav class="footer-links" aria-label="Footer navigation">
-        <a href="/index.html#features">Features</a>
-        <a href="/index.html#screenshots">Screenshots</a>
-        <a href="/index.html#faq">FAQ</a>
-        <a href="/support.html">Support</a>
-        <a href="/privacy.html">Privacy Policy</a>
-        <a href="/terms-of-use.html">Terms of Use</a>
-        <a href="/disclaimer.html">Disclaimer</a>
-        <a href="/index.html#download">Download</a>
-      </nav>
-      <div>© 2026 Venkata Palakodety. All rights reserved.</div>
-    </div>
-  </footer>
-
-  <script>
-    const siteHeader = document.querySelector('.nav');
-    const updateHeaderState = () => {
-      if (!siteHeader) return;
-      siteHeader.classList.toggle('scrolled', window.scrollY > 48);
+<a href="/privacy.html">Privacy Policy</a>
+<a href="/terms-of-use.html">Terms of Use</a>
+<a href="/disclaimer.html">Disclaimer</a>
+<a href="/index.html#download">Download</a>
+</nav>
+<div>© 2026 Venkata Palakodety. All rights reserved.</div>
+</div>
+</footer>
+<script>
+    const nav = document.getElementById('siteNav');
+    const updateNav = () => {
+      if (nav) nav.classList.toggle('scrolled', window.scrollY > 40);
     };
-    updateHeaderState();
-    window.addEventListener('scroll', updateHeaderState, { passive: true });
+    updateNav();
+    window.addEventListener('scroll', updateNav, { passive: true });
   </script>
 </body>
 </html>
