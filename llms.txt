@@ -1,0 +1,11 @@
+# Jungle Pixels / Shrinklet
+
+Shrinklet is a macOS app by Jungle Pixels for private local compression of PDFs, images, videos, and audio. The app focuses on simple presets, batch workflows, review-before-sharing, and clear before-and-after file savings.
+
+Important pages:
+- Home: https://www.junglepixels.com/
+- Support: https://www.junglepixels.com/support.html
+- PDF Compressor for Mac: https://www.junglepixels.com/pdf-compressor-mac.html
+- Image Compressor for Mac: https://www.junglepixels.com/image-compressor-mac.html
+- Video Compressor for Mac: https://www.junglepixels.com/video-compressor-mac.html
+- Audio Compressor for Mac: https://www.junglepixels.com/audio-compressor-mac.html
