@@ -995,9 +995,3 @@
     justify-content: flex-start;
   }
 }
-
-
-    .seo-card { color: inherit; text-decoration: none; display: block; }
-    .seo-card:focus-visible { outline: 3px solid rgba(255,79,102,.45); outline-offset: 4px; }
-    .seo-rich { max-width: 900px; margin: 28px auto 0; color: var(--muted); line-height: 1.75; font-size: 1.05rem; }
-    .seo-rich strong { color: var(--ink); }
